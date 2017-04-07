@@ -4,6 +4,7 @@ default:
       contexts:
         - FeatureContext
         - CalculatorContext
+        - WikipediaContext
 
   extensions:
     Behat\MinkExtension:
