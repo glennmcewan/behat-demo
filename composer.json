@@ -1,9 +1,14 @@
 {
 	"require": {
-		"behat/behat": "2.4@stable"
+		"behat/behat": "^3.2@dev"
 	},
 	"minimum-stability": "dev",
 	"require-dev": {
 		"symfony/var-dumper": "^3.3@dev"
+	},
+	"autoload": {
+		"psr-4": {
+			"App\\": "src/"
+		}
 	}
 }
