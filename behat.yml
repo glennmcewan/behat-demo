@@ -1,8 +1,21 @@
 default:
-
   suites:
-  
     default:
       contexts:
         - FeatureContext
         - CalculatorContext
+
+  extensions:
+    Behat\MinkExtension:
+      base_url: 'https://en.wikipedia.org/'
+      browser_name: 'chrome'
+
+      sessions:
+        default:
+          selenium2:
+            wd_host: 'http://localhost:4444/wd/hub'
+            capabilities:
+              platform: WINDOWS
+              version: ''
+              browser: 'chrome'
+              browserName: 'chrome'
