@@ -20,3 +20,4 @@ default:
               version: ''
               browser: 'chrome'
               browserName: 'chrome'
+    Cjm\Behat\StepThroughExtension: ~
