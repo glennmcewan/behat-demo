@@ -11,7 +11,7 @@ use Behat\MinkExtension\Context\RawMinkContext;
  */
 class WikipediaContext extends RawMinkContext implements Context
 {
-	/**
+    /**
      * Initializes context.
      *
      * Every scenario gets its own context instance.
@@ -52,7 +52,7 @@ class WikipediaContext extends RawMinkContext implements Context
         ];
 
         $language = strtolower($language);
-        
+
         if (!array_key_exists($language, $map)) {
             throw new Exception('Language code not mapped.');
         }
