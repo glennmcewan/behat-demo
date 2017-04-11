@@ -27,6 +27,16 @@ class CalculatorContext implements Context
     }
 
     /**
+     * @Transform /^(-?[0-9]+)$/
+     * @param  string $string String representation of a number
+     * @return int            Converted the string to an int type.
+     */
+    public function castStringToNumber($string)
+    {
+        return intval($string);
+    }
+
+    /**
      * @Given /^I have a new calculator instance$/
      */
     public function iHaveANewCalculatorInstance()
@@ -35,21 +45,36 @@ class CalculatorContext implements Context
     }
 
     /**
-     * @When /^I add the number (\d+) and the number (\d+)$/
+     * @When /^I add the number (-?[0-9]+)$/
      */
-    public function iAddTheNumberAndTheNumber($first, $second)
+    public function iAddTheNumber($number)
     {
-        $this->calculator->add((int) $first);
-        $this->calculator->add((int) $second);
+        $this->calculator->add($number);
     }
 
     /**
-     * @Then /^I should see a total of (\d+)$/
+     * @When /^I add the number (-?[0-9]+) and the number (-?[0-9]+)$/
+     */
+    public function iAddTheNumberAndTheNumber($first, $second)
+    {
+        $this->calculator->add($first);
+        $this->calculator->add($second);
+    }
+
+    /**
+     * @When /^I subtract the number (-?[0-9]+)$/
+     */
+    public function iSubtractTheNumber($number)
+    {
+        $this->calculator->subtract($number);
+    }
+
+    /**
+     * @Then /^I should see a total of (-?[0-9]+)$/
      */
     public function iShouldSeeATotalOf($expected)
     {
         $actual = $this->calculator->getSum();
-        $expected = (int) $expected;
 
         if ($actual !== $expected) {
             throw new Exception('Actual total: ' . $actual);
