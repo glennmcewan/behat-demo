@@ -1,7 +1,5 @@
 <?php
 
-use Exception;
-
 use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Behat\Context\Context;
 use Behat\Gherkin\Node\PyStringNode;
@@ -11,7 +9,7 @@ use Behat\MinkExtension\Context\RawMinkContext;
 /**
  * Defines application features from the specific context.
  */
-class FeatureContext extends RawMinkContext
+class FeatureContext extends RawMinkContext implements Context
 {
     /**
      * Initializes context.
