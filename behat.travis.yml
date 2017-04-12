@@ -10,13 +10,9 @@ default:
     Behat\MinkExtension:
       base_url: 'https://en.wikipedia.org/'
       browser_name: 'firefox'
+      default_session: goutte
 
-      sessions:
-        default:
-          selenium2:
-            capabilities:
-              platform: LINUX
-              version: ''
-              browser: 'firefox'
-              browserName: 'firefox'
+      # sessions:
+      goutte: ~
+
     Cjm\Behat\StepThroughExtension: ~
