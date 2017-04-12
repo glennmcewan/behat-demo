@@ -12,7 +12,7 @@ env:
 sudo: false
 
 before_install:
-    - pyrus install pear/PHP_CodeSniffer
+    - pear install pear/PHP_CodeSniffer
     - phpenv rehash
     - composer self-update
     - "wget http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar && mv selenium-server-standalone-2.53.1.jar ~"
