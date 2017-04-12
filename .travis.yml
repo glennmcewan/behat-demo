@@ -19,8 +19,8 @@ before_script:
     - sleep 3 # Gives a bit of time for xvfb to start
 
 script:
-    vendor/bin/phpunit --verbose
-    vendor/bin/behat --config behat.travis.yml
+    - vendor/bin/phpunit --verbose
+    - vendor/bin/behat --config behat.travis.yml
 
 matrix:
     allow_failures:
