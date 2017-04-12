@@ -54,7 +54,7 @@ class Calculator
 
     /**
      * Subtract a number from the total.
-     * @param  int $integer The number to subtract from the total.
+     * @param  int $int The number to subtract from the total.
      */
     public function subtract($int)
     {
