@@ -26,7 +26,7 @@ class Calculator
      */
     public function clear()
     {
-        $this->total = 0;
+        $this->sum = 0;
     }
 
     /**
