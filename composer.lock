@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b323bff0d76a7623ec91075b673419c",
+    "content-hash": "73f81f9bec46049d9e894b05bfc566b7",
     "packages": [
         {
             "name": "behat/behat",
@@ -867,16 +867,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.6.0",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "5a5a9fc8025a08d8919be87d6884d5a92520cefe"
+                "reference": "8e6e04167378abf1ddb4d3522d8755c5fd90d102"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/5a5a9fc8025a08d8919be87d6884d5a92520cefe",
-                "reference": "5a5a9fc8025a08d8919be87d6884d5a92520cefe",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/8e6e04167378abf1ddb4d3522d8755c5fd90d102",
+                "reference": "8e6e04167378abf1ddb4d3522d8755c5fd90d102",
                 "shasum": ""
             },
             "require": {
@@ -905,7 +905,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2017-01-26T22:05:40+00:00"
+            "time": "2017-04-12T18:52:22+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -2508,12 +2508,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "bc17efeee2e838d4fe8758468865b1871b97c916"
+                "reference": "aff36be0cb6691aa49efa61604407d8489657a7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/bc17efeee2e838d4fe8758468865b1871b97c916",
-                "reference": "bc17efeee2e838d4fe8758468865b1871b97c916",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/aff36be0cb6691aa49efa61604407d8489657a7a",
+                "reference": "aff36be0cb6691aa49efa61604407d8489657a7a",
                 "shasum": ""
             },
             "require": {
@@ -2563,7 +2563,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2017-04-12 14:13:17"
+            "time": "2017-04-12 15:25:29"
         },
         {
             "name": "symfony/dom-crawler",
@@ -2860,12 +2860,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "5972baa0c0ea4fe412a0eaa489427da00987f363"
+                "reference": "e389c47ccde1cc76d3598a3d10afa6edee355690"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/5972baa0c0ea4fe412a0eaa489427da00987f363",
-                "reference": "5972baa0c0ea4fe412a0eaa489427da00987f363",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/e389c47ccde1cc76d3598a3d10afa6edee355690",
+                "reference": "e389c47ccde1cc76d3598a3d10afa6edee355690",
                 "shasum": ""
             },
             "require": {
@@ -2907,7 +2907,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-04-12 14:14:56"
+            "time": "2017-04-12 20:43:31"
         },
         {
             "name": "webmozart/assert",
@@ -3025,7 +3025,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2017-04-12T14:14:56+00:00"
+            "time": "2017-04-12 14:14:56"
         }
     ],
     "aliases": [],
@@ -3039,7 +3039,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.5"
+        "php": ">=5.6"
     },
     "platform-dev": []
 }
