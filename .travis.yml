@@ -29,7 +29,7 @@ before_script:
 
 script:
     - vendor/bin/phpunit --verbose
-    - vendor/bin/behat --config behat.travis.yml
+    - vendor/bin/behat --config behat.travis.yml --tags '~@javascript' # Skip JS tests for now as we're using the Goutte driver (non-JS)
 
 matrix:
     allow_failures:
