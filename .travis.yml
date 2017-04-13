@@ -25,6 +25,8 @@ install:
 
 before_script:
     - phpcs --config-set installed_paths ~/coder/coder_sniffer
+    - phpcs --config-set show_progress 1
+    - phpcs --config-set colors 1
     - "export DISPLAY=:99.0"
     - "sh -e /etc/init.d/xvfb start"
     - sleep 3 # Gives a bit of time for xvfb to start
@@ -34,7 +36,7 @@ before_script:
 script:
     - cd $TRAVIS_BUILD_DIR
     - phpcs -i
-    - phpcs --standard=Drupal
+    - phpcs --standard=Drupal --ignore=*vendor/* .
     - vendor/bin/behat --config behat.travis.yml --tags '~@javascript' # Skip JS tests for now as we're using the Goutte driver (non-JS)
 
 matrix:
