@@ -36,7 +36,7 @@ before_script:
 script:
     - cd $TRAVIS_BUILD_DIR
     - phpcs -i
-    - phpcs --standard=Drupal --ignore=*vendor/* .
+    - phpcs --standard=Drupal src/ features/
     - vendor/bin/behat --config behat.travis.yml --tags '~@javascript' # Skip JS tests for now as we're using the Goutte driver (non-JS)
 
 matrix:
