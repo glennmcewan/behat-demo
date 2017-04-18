@@ -38,7 +38,7 @@ script:
     - cd $TRAVIS_BUILD_DIR
     - phpcs -i
     - phpcs --standard=Drupal src/ features/
-    - $TRAVIS_BUILD_DIR/vendor/bin/behat --config behat.travis.yml --tags '~@javascript' # Skip JS tests for now as we're using the Goutte driver (non-JS)
+    - $TRAVIS_BUILD_DIR/vendor/bin/behat --config behat.travis.yml
 
 matrix:
     allow_failures:
