@@ -12,14 +12,10 @@ env:
 sudo: false
 
 before_install:
-    # - apt-get install gconf2
     - pear install pear/PHP_CodeSniffer
     - phpenv rehash
     - composer self-update
     - "wget http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar && mv selenium-server-standalone-2.53.1.jar ~"
-    #- "wget http://chromedriver.googlecode.com/files/chromedriver_linux32_23.0.1240.0.zip && unzip chromedriver_linux32_23.0.1240.0.zip && mv chromedriver ~"
-    - wget "https://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip"
-    - unzip chromedriver_linux64.zip && chmod +x chromedriver && mv chromedriver $HOME/bin
     - export PATH=$PATH:$HOME/bin
     - git clone --branch 8.x-2.x http://git.drupal.org/project/coder.git ~/coder
     - cd ~/coder && composer install
