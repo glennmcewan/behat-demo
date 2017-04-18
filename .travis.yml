@@ -12,7 +12,7 @@ env:
 sudo: false
 
 before_install:
-    - apt-get install gconf2
+    # - apt-get install gconf2
     - pear install pear/PHP_CodeSniffer
     - phpenv rehash
     - composer self-update
