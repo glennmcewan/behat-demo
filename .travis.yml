@@ -16,7 +16,8 @@ before_install:
     - phpenv rehash
     - composer self-update
     - "wget http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar && mv selenium-server-standalone-2.53.1.jar ~"
-    #- "wget http://chromedriver.googlecode.com/files/chromedriver_linux32_23.0.1240.0.zip && unzip chromedriver_linux32_23.0.1240.0.zip && mv chromedriver ~"
+    - "wget http://chromedriver.googlecode.com/files/chromedriver_linux32_23.0.1240.0.zip && unzip chromedriver_linux32_23.0.1240.0.zip && mv chromedriver ~"
+    - wget "https://chromedriver.storage.googleapis.com/2.29/chromedriver_linux32.zip" && unzup chromedriver_linux32.zip && mv chromedriver /usr/local/bin
     - git clone --branch 8.x-2.x http://git.drupal.org/project/coder.git ~/coder
     - cd ~/coder && composer install
 
@@ -31,7 +32,7 @@ before_script:
     - "export DISPLAY=:99.0"
     - "sh -e /etc/init.d/xvfb start"
     - sleep 3 # Gives a bit of time for xvfb to start
-    - "java -jar ~/selenium-server-standalone-2.53.1.jar -role hub > /dev/null &"
+    - "java -jar ~/selenium-server-standalone-2.53.1.jar > /dev/null &"
     - sleep 5
 
 script:
