@@ -10,13 +10,12 @@ default:
     Behat\MinkExtension:
       base_url: 'https://en.wikipedia.org/'
       browser_name: 'firefox'
-      # default_session: selenium
 
       sessions:
         default:
           selenium2:
             capabilities:
-              platform: WINDOWS
+              platform: LINUX
               version: ''
               browser: 'firefox'
               browserName: 'firefox'
