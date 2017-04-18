@@ -1,13 +1,11 @@
 <?php
 
 use Behat\Behat\Context\Context;
-use Behat\Gherkin\Node\PyStringNode;
-use Behat\Gherkin\Node\TableNode;
 
 use App\Calculator;
 
 /**
- * Calculator context
+ * Calculator context.
  */
 class CalculatorContext implements Context {
 
@@ -44,13 +42,17 @@ class CalculatorContext implements Context {
   }
 
   /**
+   * Set this.calculator to be a new instance.
+   *
    * @Given /^I have a new calculator instance$/
    */
-  public function iHaveANewCalculatorInstance() {
+  public function iHaveNewCalculatorInstance() {
     $this->calculator = new Calculator();
   }
 
   /**
+   * Add a number to the calculator.
+   *
    * @When /^I add the number (-?[0-9]+)$/
    */
   public function iAddTheNumber($number) {
@@ -58,6 +60,8 @@ class CalculatorContext implements Context {
   }
 
   /**
+   * Add two numbers to the calculator.
+   *
    * @When /^I add the number (-?[0-9]+) and the number (-?[0-9]+)$/
    */
   public function iAddTheNumberAndTheNumber($first, $second) {
@@ -66,6 +70,8 @@ class CalculatorContext implements Context {
   }
 
   /**
+   * Subtract a number from the calculator.
+   *
    * @When /^I subtract the number (-?[0-9]+)$/
    */
   public function iSubtractTheNumber($number) {
@@ -73,9 +79,11 @@ class CalculatorContext implements Context {
   }
 
   /**
+   * Assert the calculator total is correct.
+   *
    * @Then /^I should see a total of (-?[0-9]+)$/
    */
-  public function iShouldSeeATotalOf($expected) {
+  public function iShouldSeeTotalOf($expected) {
     $actual = $this->calculator->getSum();
 
     PHPUnit_Framework_Assert::assertSame($expected, $actual);
