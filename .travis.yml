@@ -21,6 +21,7 @@ before_install:
     - cd ~/coder && composer install
 
 install:
+    - cd $TRAVIS_BUILD_DIR
     - composer install -dev
 
 before_script:
