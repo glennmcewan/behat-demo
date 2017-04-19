@@ -3,6 +3,7 @@ Feature: Search Wikipedia for BDD
   As a passionate developer
   I need to be able to search Wikipedia to find our more information on BDD
 
+@javascript
 Scenario: Search Wikipedia for BDD
   Given I am on the url "/"
   When I search for "Behaviour driven development"

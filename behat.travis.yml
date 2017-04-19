@@ -1,0 +1,23 @@
+default:
+  suites:
+    default:
+      contexts:
+        - FeatureContext
+        - CalculatorContext
+        - WikipediaContext
+
+  extensions:
+    Behat\MinkExtension:
+      base_url: 'https://en.wikipedia.org/'
+      browser_name: 'firefox'
+
+      sessions:
+        default:
+          selenium2:
+            capabilities:
+              platform: LINUX
+              version: ''
+              browser: 'firefox'
+              browserName: 'firefox'
+
+    Cjm\Behat\StepThroughExtension: ~
