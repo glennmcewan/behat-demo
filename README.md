@@ -1,5 +1,8 @@
 # Behat Playground
 
+[![Build Status](https://travis-ci.org/glennunipro/behat-demo.svg?branch=master)](https://travis-ci.org/glennunipro/behat-demo)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/glennunipro/behat-demo/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/glennunipro/behat-demo/?branch=master)
+
 Playground environment for learning how to set up and install Behat with the Selenium driver, utilising Grid and Chrome driver.
 
 An assumption is made that you'll be running this in a Virtual Machine configured with PHP -- this means that the Selenium Grid will be running **inside** of the VM, and you'll need to register a *node* (a worker) to the Selenium Grid from the host machine. The node is the worker which will launch a visual browser and perform the Selenium tests, whilst being driven by Selenium Grid on the VM.
