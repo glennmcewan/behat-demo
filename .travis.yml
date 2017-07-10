@@ -12,7 +12,6 @@ env:
 sudo: false
 
 before_install:
-    - pear install pear/PHP_CodeSniffer
     - phpenv rehash
     - composer self-update
     - wget http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar && mv selenium-server-standalone-2.53.1.jar ~
@@ -25,9 +24,10 @@ install:
     - composer install -dev
 
 before_script:
-    - phpcs --config-set installed_paths ~/coder/coder_sniffer
-    - phpcs --config-set show_progress 1
-    - phpcs --config-set colors 1
+    - cd $TRAVIS_BUILD_DIR
+    - vendor/bin/phpcs --config-set installed_paths ~/coder/coder_sniffer
+    - vendor/bin/phpcs --config-set show_progress 1
+    - vendor/bin/phpcs --config-set colors 1
     - "export DISPLAY=:99.0"
     - "sh -e /etc/init.d/xvfb start"
     - sleep 3 # Gives a bit of time for xvfb to start
@@ -36,8 +36,8 @@ before_script:
 
 script:
     - cd $TRAVIS_BUILD_DIR
-    - phpcs -i
-    - phpcs --standard=Drupal src/ features/
+    - vendor/bin/phpcs -i
+    - vendor/bin/phpcs --standard=Drupal src/ features/
     - $TRAVIS_BUILD_DIR/vendor/bin/behat --config behat.travis.yml
 
 matrix:
