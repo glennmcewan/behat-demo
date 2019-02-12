@@ -1,5 +1,7 @@
 # Behat Playground
 
+TEST
+
 [![Build Status](https://travis-ci.org/glennunipro/behat-demo.svg?branch=master)](https://travis-ci.org/glennunipro/behat-demo)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/glennunipro/behat-demo/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/glennunipro/behat-demo/?branch=master)
 
